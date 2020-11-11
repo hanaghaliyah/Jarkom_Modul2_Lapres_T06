@@ -8,6 +8,8 @@ Kelompok T06
 
 NOMOR 17
 Buat file .htaccess <br>
-``` RewriteEngine on
+``` 
+RewriteEngine on
 RewriteCond %{REQUEST_URI} foobar
-RewriteRule .* index.php ```
+RewriteRule .* index.php 
+```
