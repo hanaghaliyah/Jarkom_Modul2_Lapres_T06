@@ -13,7 +13,17 @@ Kelompok T06
 ##### Soal
 Kalian diminta untuk membuat sebuah website utama dengan (1) alamat http://semeruyyy.pw yang memiliki (2) alias http://www.semeruyyy.pw
 ##### Penyelesaian
-Pertamax
+- Buka `nano /etc/bind/named.conf.local` pada <b>UML Malang</b>
+- Kemudian membuat konfigurasi domain semerut06.pw dengan syntax
+```
+zone "semerut06.pw" {
+	type master;
+	file "/etc/bind/semeru/semerut06.pw";
+};
+```
+- Buat folder <b>semeru</b> di `/etc/bind 
+- Copy file <b>db.local</b> ke <b> semerut06.pw dengan perintah `cp /etc/bind/db.local /etc/bind/jarkom/jarkom2020.com`
+- Kemudian `nano /etc/bind/semeru/semerut06.pw` dan diubah
 
 #### NOMOR 3
 ##### Soal
