@@ -47,7 +47,7 @@ Gunakan perintah `service apache2 restart`
 Awalnya web dapat diakses menggunakan alamat http://semeruyyy.pw/index.php/home. Karena dirasa alamat urlnya kurang bagus, maka (9) diaktifkan mod rewrite agar urlnya menjadi http://semeruyyy.pw/home.
 
 ##### Penyelesaian
-- Pindah Ke directory '/var/www/semerut06.pw'
+- Pindah Ke directory `/var/www/semerut06.pw`
 - Buat file <b>.htaccess</b> dengan isi file
 ```
 RewriteEngine On
@@ -76,35 +76,111 @@ folder sebagai berikut:
                                     /errors
 ```
 
+##### Penyelesaian
+- Pindah ke directory `/var/www/penanjakan.semerut06.pw`
+- Buat directory-directory yang diperlukan oleh website http://penanjakan.semerut06.pw <br>
+Gunakan perintah-perintah berikut ini:
+```
+mkdir /var/www/penanjakan.semerut06.pw/public/javascripts
+mkdir /var/www/penanjakan.semerut06.pw/public/css
+mkdir /var/www/penanjakan.semerut06.pw/public/images
+mkdir /var/www/penanjakan.semerut06.pw/errors
+```
+- Kemudian tampilkan list folder yang ada di `/var/www/penanjakan.semerut06.pw` menggunakan perintah `ls`
+
 #### NOMOR 11
 ##### Soal 
 Pada folder /public dibolehkan directory listing namun untuk folder yang berada di dalamnya tidak dibolehkan.
+##### Penyelesaian
+- Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>penanjakan.semerut06.pw</b> dan tambahkan
+```
+<Directory /var/www/penanjakan.semerut06.pw/public>
+     Options +Indexes
+</Directory>
+<Directory /var/www/penanjakan.semerut06.pw/public/javascripts>
+     Options -Indexes
+</Directory>
+<Directory /var/www/penanjakan.semerut06.pw/public/css>
+     Options -Indexes
+</Directory>
+<Directory /var/www/penanjakan.semerut06.pw/public/images>
+     Options -Indexes
+</Directory>
+```
+- Restart apache dengan perintah `service apache2 restart`
 
 #### NOMOR 12
 ##### Soal 
 Untuk mengatasi HTTP Error code 404, disediakan file 404.html pada folder /errors untuk mengganti error default 404 dari Apache.
+##### Penyelesaian
+-
 
 #### NOMOR 13
 ##### Soal
 Untuk mengakses file assets javascript awalnya harus menggunakan url http://penanjakan.semeruyyy.pw/public/javascripts. Karena terlalu panjang maka dibuatkan konfigurasi virtual host agar ketika mengakses file assets menjadi http://penanjakan.semeruyyy.pw/js.
+##### Penyelesaian
+- Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>penanjakan.semerut06.pw</b> dan tambahkan
+```
+Alias "/js" "/var/www/penanjakan.semerut06.pw/public/javascript"
+```
+- Restart apache dengan perintah `service apache2 restart`
 
 #### NOMOR 14
 ##### Soal
 Untuk web http://gunung.semeruyyy.pw belum dapat dikonfigurasi pada web server karena menunggu pengerjaan website selesai. Sedangkan web http://naik.gunung.semeruyyy.pw
 sudah bisa diakses hanya dengan menggunakan port 8888. DocumentRoot web berada pada /var/www/naik.gunung.semeruyyy.pw.
+##### Penyelesaian
+- Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>naik.gunung.semerut06.pw</b>
+- Tambahkan port yang digunakan
+```
+<VirtualHost *:8888>
+```
+- Tambahkan directory tempat file website kita berada
+```
+DocumentRoot /var/www/naik.gunung.semerut06.pw
+```
+- Tambahkan port 8888 pada file <b>ports.conf</b>. File </b>ports.conf</b> berada pada directory `/etc/apache2`. Cara menambahkan port yang perlu didengar adalah dengan menuliskan
+```
+Listen 8888
+```
+- Restart apache <br>
+Gunakan perintah `service apache2 restart`
 
 #### NOMOR 15
 ##### Soal
 Dikarenakan web http://naik.gunung.semeruyyy.pw bersifat private. Bibah meminta kamu membuat web http://naik.gunung.semeruyyy.pw agar diberi autentikasi password dengan username “semeru” dan password “kuynaikgunung” supaya aman dan tidak sembarang orang bisa mengaksesnya.
 ##### Penyelesaian
+- Pindah ke directory `/etc/apache2` kemudian buka file <b>naik.gunung.semerut06.pw</b>
+- Install apache2 utils
+```
+apt-get update
+apt-get install apache2-utils
+
+```
+- Setting usernamenya di `/etc/apache2`
+```
+htpasswd -c /etc/apache2/.htpasswd semeru
+```
+- Lalu akan muncul permintaan untuk mengisi password
+```
+kuynaikgunung
+```
+- Pindah ke directory `/etc/apache2/sites-enabled` kemudian buka file <b>naik.gunung.semerut06.pw</b> dan tambahkan
+```
+<Directory "/var/www/naik.gunung.semerut06.pw">
+     AuthType Basic
+     AuthName "Restricted Content"
+     AuthUserFile /etc/apache2/.htpasswd
+     Require valid-user
+</Directory>
+```
 
 
 #### NOMOR 16
 ##### Soal
 Saat Bibah mengunjungi IP PROBOLINGGO, yang muncul bukan web utama http://semeruyyy.pw melainkan laman default Apache yang bertuliskan “It works!”. Karena dirasa kurang profesional, maka setiap Bibah mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke http://semeruyyy.pw.
 ##### Penyelesaian
-Di file default
-tambah 
+Pindah ke directory `/etc/apache2` kemudian buka file <b>default</b> dan tambahkan
 ```
 Redirect / http://semerut06.pw
 ```
@@ -114,9 +190,19 @@ Redirect / http://semerut06.pw
 Karena pengunjung pada /var/www/penanjakan.semeruyyy.pw/public/images sangat banyak maka semua request gambar yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
 
 ##### Penyelesaian
-Buat file .htaccess <br>
+- Pindah ke directory `/var/www`
+- Buat file <b>.htaccess</b> dengan isi file
 ``` 
 RewriteEngine on
-RewriteCond %{REQUEST_URI} foobar
+RewriteCond %{REQUEST_URI} semeru
 RewriteRule .* index.php 
 ```
+- Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>semerut06.pw</b> dan tambahkan
+```
+<Directory /var/www/semerut06.pw>
+     Options +FollowSymLinks -Multiviews
+     AllowOverride All
+</Directory>
+```
+- Restart apache dengan perintah `service apache2 restart
+
