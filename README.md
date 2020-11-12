@@ -120,10 +120,18 @@ zone "semerut06.pw" {
 @	IN	NS	gunung.semerut06.pw
 @	IN	A	10.151.73.180	; IP Probolinggo
 ```
+- Restart bind9, `service bind9 restart`
 
 #### NOMOR 7
 ##### Soal 
 Bibah juga ingin memberi petunjuk mendaki gunung semeru kepada anggota komunitas sehingga dia meminta dibuatkan <b>subdomain</b> dengan nama http://naik.gunung.semeruyyy.pw, domain ini diarahkan ke IP Server PROBOLINGGO.
+#### Penyelesaian
+- `nano /etc/bind/delegasi/gunung.semerut06.pw`
+- Tambahkan subdomain
+```
+naik	IN	A	10.151.73.180	; IP Probolinggo
+```
+- Restart bind9, `service bind9 restart`
 
 #### NOMOR 8
 ##### Soal 
