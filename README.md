@@ -209,4 +209,6 @@ RewriteRule .* index.php
 ```
 - Restart apache dengan perintah `service apache2 restart`
 
----------------------------------------------------------------------------------------SEMANGKA UYY---------------------------------------------------------------------------
+
+
+## Semangat uyy !!!
