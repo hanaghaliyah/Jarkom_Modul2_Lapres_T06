@@ -209,9 +209,5 @@ RewriteRule .* index.php
 ```
 - Restart apache dengan perintah `service apache2 restart`
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<center><b>Semangat uyy !!! || TUHAN BERSAMA MAHASISWA SEMESTER 5</b></center>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<b>Semangat uyy !!! || TUHAN BERSAMA MAHASISWA SEMESTER 5</b>
