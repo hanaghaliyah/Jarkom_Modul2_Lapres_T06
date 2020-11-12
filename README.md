@@ -159,7 +159,6 @@ Dikarenakan web http://naik.gunung.semeruyyy.pw bersifat private. Bibah meminta 
 ```
 apt-get update
 apt-get install apache2-utils
-
 ```
 - Setting usernamenya di `/etc/apache2`
 ```
@@ -208,5 +207,5 @@ RewriteRule .* index.php
      AllowOverride All
 </Directory>
 ```
-- Restart apache dengan perintah `service apache2 restart
+- Restart apache dengan perintah `service apache2 restart`
 
