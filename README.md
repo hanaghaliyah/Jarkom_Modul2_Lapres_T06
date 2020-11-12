@@ -5,38 +5,74 @@ Kelompok T06
 1. Hana Ghaliyah Azhar  (05311840000032)
 2. Azmi                 (05311840000047)
 
-### NOMOR 1 dan 2
+#### NOMOR 1 dan 2
 ##### Soal
 Kalian diminta untuk membuat sebuah website utama dengan (1) alamat http://semeruyyy.pw yang memiliki (2) alias http://www.semeruyyy.pw
 ##### Penyelesaian
 
-### NOMOR 3
+#### NOMOR 3
 ##### Soal
 subdomain http://penanjakan.semeruyyy.pw yang diatur DNS-nya pada MALANG dan mengarah ke IP Server PROBOLINGGO
 
-### NOMOR 4
+#### NOMOR 4
 ##### Soal
 Buatkan reverse domain untuk domain utama.
 
-### NOMOR 5
+#### NOMOR 5
 ##### Soal
 Untuk mengantisipasi server dicuri/rusak, Bibah minta dibuatkan <b>DNS Server Slave</b> pada MOJOKERTO agar Bibah tidak terganggu menikmati keindahan Semeru pada Website.
 
-### NOMOR 6
+#### NOMOR 6
 ##### Soal
 Selain website utama Bibah juga meminta dibuatkan <b>subdomain</b> dengan alamat http://gunung.semeruyyy.pw yang didelegasikan pada server MOJOKERTO dan mengarah ke IP Server PROBOLINGGO.
 
-### NOMOR 7
+#### NOMOR 7
 ##### Soal 
 Bibah juga ingin memberi petunjuk mendaki gunung semeru kepada anggota komunitas sehingga dia meminta dibuatkan <b>subdomain</b> dengan nama http://naik.gunung.semeruyyy.pw, domain ini diarahkan ke IP Server PROBOLINGGO.
 
-### NOMOR 15
+#### NOMOR 8
+##### Soal 
+Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur web server. Domain http://semeruyyy.pw memiliki DocumentRoot pada /var/www/semeruyyy.pw.
+
+#### NOMOR 9
+##### Soal 
+Awalnya web dapat diakses menggunakan alamat http://semeruyyy.pw/index.php/home. Karena dirasa alamat urlnya kurang bagus, maka (9) diaktifkan mod rewrite agar urlnya menjadi http://semeruyyy.pw/home.
+
+#### NOMOR 10
 ##### Soal
-Bibah meminta kamu membuat web http://naik.gunung.semeruyyy.pw agar diberi autentikasi password dengan username “semeru” dan password “kuynaikgunung” supaya aman dan tidak sembarang orang bisa mengaksesnya.
+Web http://penanjakan.semeruyyy.pw akan digunakan untuk menyimpan assets file yang memiliki DocumentRoot pada /var/www/penanjakan.semeruyyy.pw dan memiliki struktur
+folder sebagai berikut:
+```
+/var/www/penanjakan.semeruyyy.pw    /public/javascripts
+                                    /public/css
+                                    /public/images
+                                    /errors
+```
+
+#### NOMOR 11
+##### Soal 
+Pada folder /public dibolehkan directory listing namun untuk folder yang berada di dalamnya tidak dibolehkan.
+
+#### NOMOR 12
+##### Soal 
+Untuk mengatasi HTTP Error code 404, disediakan file 404.html pada folder /errors untuk mengganti error default 404 dari Apache.
+
+#### NOMOR 13
+##### Soal
+Untuk mengakses file assets javascript awalnya harus menggunakan url http://penanjakan.semeruyyy.pw/public/javascripts. Karena terlalu panjang maka dibuatkan konfigurasi virtual host agar ketika mengakses file assets menjadi http://penanjakan.semeruyyy.pw/js.
+
+#### NOMOR 14
+##### Soal
+Untuk web http://gunung.semeruyyy.pw belum dapat dikonfigurasi pada web server karena menunggu pengerjaan website selesai. Sedangkan web http://naik.gunung.semeruyyy.pw
+sudah bisa diakses hanya dengan menggunakan port 8888. DocumentRoot web berada pada /var/www/naik.gunung.semeruyyy.pw.
+
+#### NOMOR 15
+##### Soal
+Dikarenakan web http://naik.gunung.semeruyyy.pw bersifat private. Bibah meminta kamu membuat web http://naik.gunung.semeruyyy.pw agar diberi autentikasi password dengan username “semeru” dan password “kuynaikgunung” supaya aman dan tidak sembarang orang bisa mengaksesnya.
 ##### Penyelesaian
 
 
-### NOMOR 16
+#### NOMOR 16
 ##### Soal
 Saat Bibah mengunjungi IP PROBOLINGGO, yang muncul bukan web utama http://semeruyyy.pw melainkan laman default Apache yang bertuliskan “It works!”. Karena dirasa kurang profesional, maka setiap Bibah mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke http://semeruyyy.pw.
 ##### Penyelesaian
@@ -46,7 +82,7 @@ tambah
 Redirect / http://semerut06.pw
 ```
 
-### NOMOR 17
+#### NOMOR 17
 ##### Soal
 Karena pengunjung pada /var/www/penanjakan.semeruyyy.pw/public/images sangat banyak maka semua request gambar yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
 
