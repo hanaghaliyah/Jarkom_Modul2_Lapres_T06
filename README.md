@@ -63,6 +63,28 @@ zone "73.151.10.in-addr.arpa" {
 #### NOMOR 5
 ##### Soal
 Untuk mengantisipasi server dicuri/rusak, Bibah minta dibuatkan <b>DNS Server Slave</b> pada MOJOKERTO agar Bibah tidak terganggu menikmati keindahan Semeru pada Website.
+#### Penyelesaian
+- Ubah konfigurasi pada <b>Server Malang</b> dengan `nano /etc/bind/named.conf.local`
+```
+zone "semerut06.pw" {
+    type master;
+    notify yes;
+    also-notify { 10.151.73.179; }; //IP Mojokerto
+    allow-transfer { 10.151.73.179; }; //IP Mojokerto
+    file "/etc/bind/semeru/semerut06.pw";
+};
+```
+- Restart bind9, `service bind9 restart`
+- Kemudian ke <b>Server Mojokerto</b> dan update terlebih dahulu `apt-get update` dan install bind9 jika belum
+- Ubah konfigurasi pada <b>Server Mojokerto</b> dengan `nano /etc/bind/named.conf.local`
+```
+zone "jarkom2020.com" {
+    type slave;
+    masters { 10.151.73.178; }; //IP Malang
+    file "/var/lib/bind/semerut06.pw";
+};
+```
+- Restart bind9, `service bind9 restart`
 
 #### NOMOR 6
 ##### Soal
