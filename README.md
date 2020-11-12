@@ -89,6 +89,37 @@ zone "jarkom2020.com" {
 #### NOMOR 6
 ##### Soal
 Selain website utama Bibah juga meminta dibuatkan <b>subdomain</b> dengan alamat http://gunung.semeruyyy.pw yang didelegasikan pada server MOJOKERTO dan mengarah ke IP Server PROBOLINGGO.
+- Ubah konfigurasi pada <b>Server Malang</b> dengan `nano /etc/bind/named.conf.local`
+```
+ns1	IN	A	10.151.73.179	; IP Mojokerto
+gunung	IN	A	ns1
+```
+- Kemudian `nano /etc/bind/named.conf.options` pada <b>Server Malang</b> dan bagian <b>dnssec-validation auto;</b> dijadikan komen dan tambahkan <b>allow-query{any;};</b>
+- Buka `nano /etc/bind/named.conf.local` pada <b>UML Malang</b> dan ubah syntaxnya
+```
+zone "semerut06.pw" {
+    type master;
+    allow-transfer { 10.151.73.179; }; //IP Mojokerto
+    file "/etc/bind/semeru/semerut06.pw";
+};
+```
+- Restart bind9, `service bind9 restart`
+- Kemudian `nano /etc/bind/named.conf.options` pada <b>Server Mojokerto</b> dan bagian <b>dnssec-validation auto;</b> dijadikan komen dan tambahkan <b>allow-query{any;};</b>
+- Buka `nano /etc/bind/named.conf.local` pada <b>UML Mojokerto</b> dan ubah syntaxnya
+```
+zone "semerut06.pw" {
+    type master;
+    allow-transfer { any; };
+    file "/etc/bind/delegasi/gunung.semerut06.pw";
+};
+```
+- Kemudian buat folder <b>delegasi</b>
+- Dan copy file <b>db.local</b> ke <b>gunung.semerut06.pw</b> dengan perintah `cp /etc/bind/db.local /etc/bind/delegasi/gunung.semerut06.pw`
+- Ubah isinya `/etc/bind/delegasi/gunung.semerut06.pw`
+```
+@	IN	NS	gunung.semerut06.pw
+@	IN	A	10.151.73.180	; IP Probolinggo
+```
 
 #### NOMOR 7
 ##### Soal 
