@@ -22,16 +22,43 @@ zone "semerut06.pw" {
 };
 ```
 - Buat folder <b>semeru</b> di `/etc/bind 
-- Copy file <b>db.local</b> ke <b> semerut06.pw dengan perintah `cp /etc/bind/db.local /etc/bind/jarkom/jarkom2020.com`
+- Copy file <b>db.local</b> ke <b>semerut06.pw</b> dengan perintah `cp /etc/bind/db.local /etc/bind/jarkom/jarkom2020.com`
 - Kemudian `nano /etc/bind/semeru/semerut06.pw` dan diubah
+```
+@	IN	NS	semerut06.pw
+@	IN	A	10.151.73.178	; IP Malang
+www	IN	CNAME	semerut06.pw	; Alias
+```
+- Restart bind9, `service bind9 restart`
 
 #### NOMOR 3
 ##### Soal
 subdomain http://penanjakan.semeruyyy.pw yang diatur DNS-nya pada MALANG dan mengarah ke IP Server PROBOLINGGO
+#### Penyelesaian
+- Buka file dengan `nano /etc/bind/semeru/semerut06.pw`
+- Tambah subdomain <b>penanjakan.semerut06.pw</b> dan arahkan IP nya ke IP Server Probolinggo
+```
+penanjakan	IN	A	10.151.73.180	; IP Probolinggo
+```
+- Restart bind9 , `service bind9 restart`
 
 #### NOMOR 4
 ##### Soal
 Buatkan reverse domain untuk domain utama.
+- Edit file `nano /etc/bind/named.conf.local`
+- Tambahkan syntax berikut
+```
+zone "73.151.10.in-addr.arpa" {
+    type master;
+    file "/etc/bind/semeru/73.151.10.in-addr.arpa";
+};
+```
+- Copy file <b>db.local</b> ke <b>73.151.10.in-addr.arpa</b> dengan perintah `cp /etc/bind/db.local /etc/bind/jarkom/73.151.10.in-addr.arpa`
+- Kemudian `nano /etc/bind/semeru/73.151.10.in-addr.arpa` dan diubah
+```
+178	IN	PTR	semerut06.pw
+```
+- Restart bind9, `service bind9 restart`
 
 #### NOMOR 5
 ##### Soal
