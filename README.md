@@ -45,6 +45,7 @@ penanjakan	IN	A	10.151.73.180	; IP Probolinggo
 #### NOMOR 4
 ##### Soal
 Buatkan reverse domain untuk domain utama.
+#### Penyelesaian
 - Edit file `nano /etc/bind/named.conf.local`
 - Tambahkan syntax berikut
 ```
@@ -89,6 +90,7 @@ zone "jarkom2020.com" {
 #### NOMOR 6
 ##### Soal
 Selain website utama Bibah juga meminta dibuatkan <b>subdomain</b> dengan alamat http://gunung.semeruyyy.pw yang didelegasikan pada server MOJOKERTO dan mengarah ke IP Server PROBOLINGGO.
+### Penyelesaian
 - Ubah konfigurasi pada <b>Server Malang</b> dengan `nano /etc/bind/named.conf.local`
 ```
 ns1	IN	A	10.151.73.179	; IP Mojokerto
@@ -126,7 +128,7 @@ zone "semerut06.pw" {
 ##### Soal 
 Bibah juga ingin memberi petunjuk mendaki gunung semeru kepada anggota komunitas sehingga dia meminta dibuatkan <b>subdomain</b> dengan nama http://naik.gunung.semeruyyy.pw, domain ini diarahkan ke IP Server PROBOLINGGO.
 #### Penyelesaian
-- `nano /etc/bind/delegasi/gunung.semerut06.pw`
+- `nano /etc/bind/delegasi/gunung.semerut06.pw` pada <b>Server Mojokerto</b>
 - Tambahkan subdomain
 ```
 naik	IN	A	10.151.73.180	; IP Probolinggo
