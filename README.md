@@ -5,6 +5,8 @@ Kelompok T06
 1. Hana Ghaliyah Azhar  (05311840000032)
 2. Azmi                 (05311840000047)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #### NOMOR 1 dan 2
 ##### Soal
 Kalian diminta untuk membuat sebuah website utama dengan (1) alamat http://semeruyyy.pw yang memiliki (2) alias http://www.semeruyyy.pw
