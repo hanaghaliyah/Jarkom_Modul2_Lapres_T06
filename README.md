@@ -9,6 +9,7 @@ Kelompok T06
 ##### Soal
 Kalian diminta untuk membuat sebuah website utama dengan (1) alamat http://semeruyyy.pw yang memiliki (2) alias http://www.semeruyyy.pw
 ##### Penyelesaian
+Pertamax
 
 #### NOMOR 3
 ##### Soal
