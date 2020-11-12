@@ -214,4 +214,4 @@ RewriteRule .* index.php
 <br>
 <br>
 <br>
-                                                                  <b>Semangat uyy !!! || TUHAN BERSAMA MAHASISWA SEMESTER 5</b>
+<center><b>Semangat uyy !!! || TUHAN BERSAMA MAHASISWA SEMESTER 5</b></center>
