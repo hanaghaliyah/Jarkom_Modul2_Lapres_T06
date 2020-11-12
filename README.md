@@ -9,7 +9,7 @@ Kelompok T06
 ![in progress](https://user-images.githubusercontent.com/26424136/98954663-9990e580-2530-11eb-9bae-56838510560c.jpg)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### NOMOR 1 dan 2
+### NOMOR 1 dan 2
 ##### Soal
 Kalian diminta untuk membuat sebuah website utama dengan (1) alamat http://semeruyyy.pw yang memiliki (2) alias http://www.semeruyyy.pw
 ##### Penyelesaian
@@ -31,7 +31,7 @@ www	IN	CNAME	semerut06.pw	; Alias
 ```
 - Restart bind9, `service bind9 restart`
 
-#### NOMOR 3
+### NOMOR 3
 ##### Soal
 subdomain http://penanjakan.semeruyyy.pw yang diatur DNS-nya pada MALANG dan mengarah ke IP Server PROBOLINGGO
 #### Penyelesaian
@@ -42,7 +42,7 @@ penanjakan	IN	A	10.151.73.180	; IP Probolinggo
 ```
 - Restart bind9 , `service bind9 restart`
 
-#### NOMOR 4
+### NOMOR 4
 ##### Soal
 Buatkan reverse domain untuk domain utama.
 #### Penyelesaian
@@ -61,7 +61,7 @@ zone "73.151.10.in-addr.arpa" {
 ```
 - Restart bind9, `service bind9 restart`
 
-#### NOMOR 5
+### NOMOR 5
 ##### Soal
 Untuk mengantisipasi server dicuri/rusak, Bibah minta dibuatkan <b>DNS Server Slave</b> pada MOJOKERTO agar Bibah tidak terganggu menikmati keindahan Semeru pada Website.
 #### Penyelesaian
@@ -87,10 +87,10 @@ zone "jarkom2020.com" {
 ```
 - Restart bind9, `service bind9 restart`
 
-#### NOMOR 6
+### NOMOR 6
 ##### Soal
 Selain website utama Bibah juga meminta dibuatkan <b>subdomain</b> dengan alamat http://gunung.semeruyyy.pw yang didelegasikan pada server MOJOKERTO dan mengarah ke IP Server PROBOLINGGO.
-### Penyelesaian
+#### Penyelesaian
 - Ubah konfigurasi pada <b>Server Malang</b> dengan `nano /etc/bind/named.conf.local`
 ```
 ns1	IN	A	10.151.73.179	; IP Mojokerto
@@ -124,7 +124,7 @@ zone "semerut06.pw" {
 ```
 - Restart bind9, `service bind9 restart`
 
-#### NOMOR 7
+### NOMOR 7
 ##### Soal 
 Bibah juga ingin memberi petunjuk mendaki gunung semeru kepada anggota komunitas sehingga dia meminta dibuatkan <b>subdomain</b> dengan nama http://naik.gunung.semeruyyy.pw, domain ini diarahkan ke IP Server PROBOLINGGO.
 #### Penyelesaian
@@ -135,7 +135,7 @@ naik	IN	A	10.151.73.180	; IP Probolinggo
 ```
 - Restart bind9, `service bind9 restart`
 
-#### NOMOR 8
+### NOMOR 8
 ##### Soal 
 Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur web server. Domain http://semeruyyy.pw memiliki DocumentRoot pada /var/www/semeruyyy.pw.
 ##### Penyelesaian
@@ -146,7 +146,7 @@ Gunakan perintah `a2ensite semerut06.pw`
 - Restart Apache <br>
 Gunakan perintah `service apache2 restart`
 
-#### NOMOR 9
+### NOMOR 9
 ##### Soal 
 Awalnya web dapat diakses menggunakan alamat http://semeruyyy.pw/index.php/home. Karena dirasa alamat urlnya kurang bagus, maka (9) diaktifkan mod rewrite agar urlnya menjadi http://semeruyyy.pw/home.
 
@@ -169,7 +169,7 @@ RewriteRule ^(.*)$ index.php/$1 [L]
 - Restart apache dengan perintah `service apache2 restart`
 
 
-#### NOMOR 10
+### NOMOR 10
 ##### Soal
 Web http://penanjakan.semeruyyy.pw akan digunakan untuk menyimpan assets file yang memiliki DocumentRoot pada /var/www/penanjakan.semeruyyy.pw dan memiliki struktur
 folder sebagai berikut:
@@ -192,7 +192,7 @@ mkdir /var/www/penanjakan.semerut06.pw/errors
 ```
 - Kemudian tampilkan list folder yang ada di `/var/www/penanjakan.semerut06.pw` menggunakan perintah `ls`
 
-#### NOMOR 11
+### NOMOR 11
 ##### Soal 
 Pada folder /public dibolehkan directory listing namun untuk folder yang berada di dalamnya tidak dibolehkan.
 ##### Penyelesaian
@@ -213,13 +213,13 @@ Pada folder /public dibolehkan directory listing namun untuk folder yang berada 
 ```
 - Restart apache dengan perintah `service apache2 restart`
 
-#### NOMOR 12
+### NOMOR 12
 ##### Soal 
 Untuk mengatasi HTTP Error code 404, disediakan file 404.html pada folder /errors untuk mengganti error default 404 dari Apache.
 ##### Penyelesaian
 ![ongoing](https://user-images.githubusercontent.com/26424136/98954441-5df61b80-2530-11eb-99ae-ae081c19b592.jpg)
 
-#### NOMOR 13
+### NOMOR 13
 ##### Soal
 Untuk mengakses file assets javascript awalnya harus menggunakan url http://penanjakan.semeruyyy.pw/public/javascripts. Karena terlalu panjang maka dibuatkan konfigurasi virtual host agar ketika mengakses file assets menjadi http://penanjakan.semeruyyy.pw/js.
 ##### Penyelesaian
@@ -229,7 +229,7 @@ Alias "/js" "/var/www/penanjakan.semerut06.pw/public/javascript"
 ```
 - Restart apache dengan perintah `service apache2 restart`
 
-#### NOMOR 14
+### NOMOR 14
 ##### Soal
 Untuk web http://gunung.semeruyyy.pw belum dapat dikonfigurasi pada web server karena menunggu pengerjaan website selesai. Sedangkan web http://naik.gunung.semeruyyy.pw
 sudah bisa diakses hanya dengan menggunakan port 8888. DocumentRoot web berada pada /var/www/naik.gunung.semeruyyy.pw.
@@ -250,7 +250,7 @@ Listen 8888
 - Restart apache <br>
 Gunakan perintah `service apache2 restart`
 
-#### NOMOR 15
+### NOMOR 15
 ##### Soal
 Dikarenakan web http://naik.gunung.semeruyyy.pw bersifat private. Bibah meminta kamu membuat web http://naik.gunung.semeruyyy.pw agar diberi autentikasi password dengan username “semeru” dan password “kuynaikgunung” supaya aman dan tidak sembarang orang bisa mengaksesnya.
 ##### Penyelesaian
@@ -279,7 +279,7 @@ kuynaikgunung
 ```
 
 
-#### NOMOR 16
+### NOMOR 16
 ##### Soal
 Saat Bibah mengunjungi IP PROBOLINGGO, yang muncul bukan web utama http://semeruyyy.pw melainkan laman default Apache yang bertuliskan “It works!”. Karena dirasa kurang profesional, maka setiap Bibah mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke http://semeruyyy.pw.
 ##### Penyelesaian
@@ -288,7 +288,7 @@ Pindah ke directory `/etc/apache2` kemudian buka file <b>default</b> dan tambahk
 Redirect / http://semerut06.pw
 ```
 
-#### NOMOR 17
+### NOMOR 17
 ##### Soal
 Karena pengunjung pada /var/www/penanjakan.semeruyyy.pw/public/images sangat banyak maka semua request gambar yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
 
