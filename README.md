@@ -6,6 +6,8 @@ Kelompok T06
 2. Azmi                 (05311840000047)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![in progress](https://user-images.githubusercontent.com/26424136/98954663-9990e580-2530-11eb-9bae-56838510560c.jpg)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #### NOMOR 1 dan 2
 ##### Soal
@@ -115,7 +117,7 @@ Pada folder /public dibolehkan directory listing namun untuk folder yang berada 
 ##### Soal 
 Untuk mengatasi HTTP Error code 404, disediakan file 404.html pada folder /errors untuk mengganti error default 404 dari Apache.
 ##### Penyelesaian
--
+![ongoing](https://user-images.githubusercontent.com/26424136/98954441-5df61b80-2530-11eb-99ae-ae081c19b592.jpg)
 
 #### NOMOR 13
 ##### Soal
