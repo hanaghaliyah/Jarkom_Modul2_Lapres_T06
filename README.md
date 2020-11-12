@@ -41,7 +41,7 @@ Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur w
 - Buka file <b>semerut06.pw</b> dan ubah <b>DocumentRoot</b> menjadi `/var/www/semerut06.pw`
 - Aktifkan konfigurasi <b>semerut06.pw</b>
 Gunakan perintah `a2ensite semerut06.pw`
-- Restart Apache
+- Restart Apache <br>
 Gunakan perintah `service apache2 restart`
 
 #### NOMOR 9
