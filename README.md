@@ -34,10 +34,36 @@ Bibah juga ingin memberi petunjuk mendaki gunung semeru kepada anggota komunitas
 #### NOMOR 8
 ##### Soal 
 Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur web server. Domain http://semeruyyy.pw memiliki DocumentRoot pada /var/www/semeruyyy.pw.
+##### Penyelesaian
+- Pindah ke directory `/etc/apache2/sites-available`
+- Buka file <b>semerut06.pw</b> dan ubah <b>DocumentRoot</b> menjadi `/var/www/semerut06.pw`
+- Aktifkan konfigurasi <b>semerut06.pw</b>
+Gunakan perintah `a2ensite semerut06.pw`
+- Restart Apache
+Gunakan perintah `service apache2 restart`
 
 #### NOMOR 9
 ##### Soal 
 Awalnya web dapat diakses menggunakan alamat http://semeruyyy.pw/index.php/home. Karena dirasa alamat urlnya kurang bagus, maka (9) diaktifkan mod rewrite agar urlnya menjadi http://semeruyyy.pw/home.
+
+##### Penyelesaian
+- Pindah Ke directory '/var/www/semerut06.pw'
+- Buat file <b>.htaccess</b> dengan isi file
+```
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+```
+- Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>semerut06.pw</b> dan tambahkan 
+```
+<Directory /var/www/semerut06.pw>
+     Options +FollowSymLinks -Multiviews
+     AllowOverride All
+</Directory>
+```
+- Restart apache dengan perintah `service apache2 restart`
+
 
 #### NOMOR 10
 ##### Soal
