@@ -309,13 +309,12 @@ kuynaikgunung
      Require valid-user
 </Directory>
 ```
-- Screenshot
-<img width="357" alt="soal 15" src="https://user-images.githubusercontent.com/26424136/99019637-5023b300-258f-11eb-815d-abc94dee108b.PNG">
 #### Testing
-- Masukkan username `semeru` dan password `kuynaikgunung` <br>
+Masukkan username `semeru` dan password `kuynaikgunung` <br>
 ![no 14 15](https://user-images.githubusercontent.com/26424136/99102871-45116700-2611-11eb-9caf-cf2adb8c5a42.png)
-- Login berhasil dan website bisa diakses <br>
+Login berhasil dan website bisa diakses <br>
 ![no 14 15 b](https://user-images.githubusercontent.com/26424136/99102864-43e03a00-2611-11eb-87e7-b517c3b37791.png)
+
 ### NOMOR 16
 #### Soal
 Saat Bibah mengunjungi IP PROBOLINGGO, yang muncul bukan web utama http://semeruyyy.pw melainkan laman default Apache yang bertuliskan “It works!”. Karena dirasa kurang profesional, maka setiap Bibah mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke http://semeruyyy.pw.
