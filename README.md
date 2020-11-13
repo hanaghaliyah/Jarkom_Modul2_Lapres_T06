@@ -30,7 +30,7 @@ www	IN	CNAME	semerut06.pw	; Alias
 - Restart dengan perintah `service bind9 restart`
 ##### Testing
 Nomor 1 <br>
-<img width="365" alt="1" src="https://user-images.githubusercontent.com/26424136/99098755-062ce280-260c-11eb-921a-cb5bede76949.PNG">
+<img width="365" alt="1" src="https://user-images.githubusercontent.com/26424136/99098755-062ce280-260c-11eb-921a-cb5bede76949.PNG"> <br>
 Nomor 2 <br>
 <img width="363" alt="2" src="https://user-images.githubusercontent.com/26424136/99098766-088f3c80-260c-11eb-80fc-61c82ab6a9c6.PNG">
 
