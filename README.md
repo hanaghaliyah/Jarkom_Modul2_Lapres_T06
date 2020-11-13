@@ -6,8 +6,6 @@ Kelompok T06
 2. Azmi                 (05311840000047)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-![in progress](https://user-images.githubusercontent.com/26424136/98954663-9990e580-2530-11eb-9bae-56838510560c.jpg)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### NOMOR 1 dan 2
 ##### Soal
@@ -29,7 +27,12 @@ zone "semerut06.pw" {
 @	IN	A	10.151.73.178	; IP Malang
 www	IN	CNAME	semerut06.pw	; Alias
 ```
-- Restart bind9, `service bind9 restart`
+- Restart dengan perintah `service bind9 restart`
+##### Testing
+Nomor 1 <br>
+<img width="365" alt="1" src="https://user-images.githubusercontent.com/26424136/99098755-062ce280-260c-11eb-921a-cb5bede76949.PNG">
+Nomor 2 <br>
+<img width="363" alt="2" src="https://user-images.githubusercontent.com/26424136/99098766-088f3c80-260c-11eb-80fc-61c82ab6a9c6.PNG">
 
 ### NOMOR 3
 ##### Soal
@@ -40,7 +43,9 @@ subdomain http://penanjakan.semeruyyy.pw yang diatur DNS-nya pada MALANG dan men
 ```
 penanjakan	IN	A	10.151.73.180	; IP Probolinggo
 ```
-- Restart bind9 , `service bind9 restart`
+- Restart dengan perintah `service bind9 restart`
+##### Testing
+<img width="365" alt="3" src="https://user-images.githubusercontent.com/26424136/99102805-2f9c3d00-2611-11eb-8854-cf76e07cfb34.PNG">
 
 ### NOMOR 4
 ##### Soal
@@ -60,6 +65,9 @@ zone "73.151.10.in-addr.arpa" {
 178	IN	PTR	semerut06.pw
 ```
 - Restart bind9, `service bind9 restart`
+
+##### Testing
+<img width="365" alt="4" src="https://user-images.githubusercontent.com/26424136/99102814-33c85a80-2611-11eb-8188-3fc2b617a1ec.PNG">
 
 ### NOMOR 5
 ##### Soal
@@ -86,6 +94,8 @@ zone "jarkom2020.com" {
 };
 ```
 - Restart bind9, `service bind9 restart`
+##### Testing
+<img width="729" alt="5" src="https://user-images.githubusercontent.com/26424136/99102817-3460f100-2611-11eb-927b-40f81ae39468.PNG">
 
 ### NOMOR 6
 ##### Soal
@@ -123,6 +133,8 @@ zone "semerut06.pw" {
 @	IN	A	10.151.73.180	; IP Probolinggo
 ```
 - Restart bind9, `service bind9 restart`
+##### Testing
+<img width="364" alt="6" src="https://user-images.githubusercontent.com/26424136/99102821-362ab480-2611-11eb-8649-b797e6efec5a.PNG">
 
 ### NOMOR 7
 ##### Soal 
@@ -134,6 +146,8 @@ Bibah juga ingin memberi petunjuk mendaki gunung semeru kepada anggota komunitas
 naik	IN	A	10.151.73.180	; IP Probolinggo
 ```
 - Restart bind9, `service bind9 restart`
+##### Testing
+<img width="366" alt="7" src="https://user-images.githubusercontent.com/26424136/99102825-36c34b00-2611-11eb-878c-7d26ee09f860.PNG">
 
 ### NOMOR 8
 ##### Soal 
@@ -145,6 +159,8 @@ Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur w
 Gunakan perintah `a2ensite semerut06.pw`
 - Restart Apache <br>
 Gunakan perintah `service apache2 restart`
+##### Testing
+![8](https://user-images.githubusercontent.com/26424136/99102829-375be180-2611-11eb-85cd-46e5cdfdd6e9.png)
 
 ### NOMOR 9
 ##### Soal 
@@ -167,6 +183,8 @@ RewriteRule ^(.*)$ index.php/$1 [L]
 </Directory>
 ```
 - Restart apache dengan perintah `service apache2 restart`
+##### Testing
+![9](https://user-images.githubusercontent.com/26424136/99102851-3e82ef80-2611-11eb-812b-b443177594c1.png)
 
 
 ### NOMOR 10
@@ -191,6 +209,8 @@ mkdir /var/www/penanjakan.semerut06.pw/public/images
 mkdir /var/www/penanjakan.semerut06.pw/errors
 ```
 - Kemudian tampilkan list folder yang ada di `/var/www/penanjakan.semerut06.pw` menggunakan perintah `ls`
+##### Testing
+![10](https://user-images.githubusercontent.com/26424136/99102857-417de000-2611-11eb-9d45-53aa06ddcea6.png)
 
 ### NOMOR 11
 ##### Soal 
@@ -212,12 +232,19 @@ Pada folder /public dibolehkan directory listing namun untuk folder yang berada 
 </Directory>
 ```
 - Restart apache dengan perintah `service apache2 restart`
+##### Testing
+![11](https://user-images.githubusercontent.com/26424136/99102858-42167680-2611-11eb-8fc7-b1650f2711e9.png)
 
 ### NOMOR 12
 ##### Soal 
 Untuk mengatasi HTTP Error code 404, disediakan file 404.html pada folder /errors untuk mengganti error default 404 dari Apache.
 ##### Penyelesaian
-![ongoing](https://user-images.githubusercontent.com/26424136/98954441-5df61b80-2530-11eb-99ae-ae081c19b592.jpg)
+Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>penanjakan.semerut06.pw</b> dan tambahkan
+```
+ErrorDocument 404 /errors/404.html
+```
+##### Testing
+![12](https://user-images.githubusercontent.com/26424136/99102861-42af0d00-2611-11eb-9a20-42b5b0c1f626.png)
 
 ### NOMOR 13
 ##### Soal
@@ -228,6 +255,8 @@ Untuk mengakses file assets javascript awalnya harus menggunakan url http://pena
 Alias "/js" "/var/www/penanjakan.semerut06.pw/public/javascript"
 ```
 - Restart apache dengan perintah `service apache2 restart`
+##### Testing
+![13](https://user-images.githubusercontent.com/26424136/99102862-4347a380-2611-11eb-9521-d524efef502f.png)
 
 ### NOMOR 14
 ##### Soal
@@ -249,6 +278,8 @@ Listen 8888
 ```
 - Restart apache <br>
 Gunakan perintah `service apache2 restart`
+##### Testing
+![no 14 15 b](https://user-images.githubusercontent.com/26424136/99102864-43e03a00-2611-11eb-87e7-b517c3b37791.png)
 
 ### NOMOR 15
 ##### Soal
@@ -279,7 +310,11 @@ kuynaikgunung
 ```
 - Screenshot
 <img width="357" alt="soal 15" src="https://user-images.githubusercontent.com/26424136/99019637-5023b300-258f-11eb-815d-abc94dee108b.PNG">
-
+##### Testing
+- Masukkan username `semeru` dan password `kuynaikgunung`
+![no 14 15 b](https://user-images.githubusercontent.com/26424136/99102864-43e03a00-2611-11eb-87e7-b517c3b37791.png)
+- Login berhasil dan website bisa diakses
+![no 14 15](https://user-images.githubusercontent.com/26424136/99102871-45116700-2611-11eb-9caf-cf2adb8c5a42.png)
 
 ### NOMOR 16
 ##### Soal
@@ -289,6 +324,8 @@ Pindah ke directory `/etc/apache2` kemudian buka file <b>default</b> dan tambahk
 ```
 Redirect / http://semerut06.pw
 ```
+##### Testing
+![8](https://user-images.githubusercontent.com/26424136/99102829-375be180-2611-11eb-85cd-46e5cdfdd6e9.png)
 
 ### NOMOR 17
 ##### Soal
