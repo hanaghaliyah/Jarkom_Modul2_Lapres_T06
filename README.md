@@ -277,6 +277,8 @@ kuynaikgunung
      Require valid-user
 </Directory>
 ```
+- Screenshot
+<img width="357" alt="soal 15" src="https://user-images.githubusercontent.com/26424136/99019637-5023b300-258f-11eb-815d-abc94dee108b.PNG">
 
 
 ### NOMOR 16
