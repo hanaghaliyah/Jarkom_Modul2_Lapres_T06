@@ -155,6 +155,7 @@ Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur w
 #### Penyelesaian
 - Pindah ke directory `/etc/apache2/sites-available`
 - Buka file <b>semerut06.pw</b> dan ubah <b>DocumentRoot</b> menjadi `/var/www/semerut06.pw`
+<img width="364" alt="8b" src="https://user-images.githubusercontent.com/26424136/99148348-c1f81b80-26b9-11eb-914f-6043cbd82507.PNG"> <br>
 - Aktifkan konfigurasi <b>semerut06.pw</b>
 Gunakan perintah `a2ensite semerut06.pw`
 - Restart Apache <br>
@@ -175,6 +176,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L]
 ```
+<img width="365" alt="9b" src="https://user-images.githubusercontent.com/26424136/99148351-c3c1df00-26b9-11eb-961c-7eed45318d81.PNG"> <br>
 - Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>semerut06.pw</b> dan tambahkan 
 ```
 <Directory /var/www/semerut06.pw>
@@ -182,6 +184,7 @@ RewriteRule ^(.*)$ index.php/$1 [L]
      AllowOverride All
 </Directory>
 ```
+<img width="365" alt="9c" src="https://user-images.githubusercontent.com/26424136/99148353-c45a7580-26b9-11eb-9451-3e30759ffc16.PNG"> <br>
 - Restart apache dengan perintah `service apache2 restart`
 #### Testing
 ![9](https://user-images.githubusercontent.com/26424136/99102851-3e82ef80-2611-11eb-812b-b443177594c1.png)
@@ -208,7 +211,9 @@ mkdir /var/www/penanjakan.semerut06.pw/public/css
 mkdir /var/www/penanjakan.semerut06.pw/public/images
 mkdir /var/www/penanjakan.semerut06.pw/errors
 ```
-- Kemudian tampilkan list folder yang ada di `/var/www/penanjakan.semerut06.pw` menggunakan perintah `ls`
+- Kemudian tampilkan list folder yang ada di `/var/www/penanjakan.semerut06.pw` menggunakan perintah `ls` <br>
+<img width="367" alt="10 b" src="https://user-images.githubusercontent.com/26424136/99148173-e43d6980-26b8-11eb-9c84-1c1dda853e14.PNG">
+
 #### Testing
 ![10](https://user-images.githubusercontent.com/26424136/99102857-417de000-2611-11eb-9d45-53aa06ddcea6.png)
 
@@ -231,6 +236,8 @@ Pada folder /public dibolehkan directory listing namun untuk folder yang berada 
      Options -Indexes
 </Directory>
 ```
+<img width="362" alt="11b" src="https://user-images.githubusercontent.com/26424136/99148085-52cdf780-26b8-11eb-8afe-4401848da87f.PNG">
+<br>
 - Restart apache dengan perintah `service apache2 restart`
 #### Testing
 ![11](https://user-images.githubusercontent.com/26424136/99102858-42167680-2611-11eb-8fc7-b1650f2711e9.png)
@@ -243,6 +250,8 @@ Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>penanja
 ```
 ErrorDocument 404 /errors/404.html
 ```
+<img width="363" alt="12b" src="https://user-images.githubusercontent.com/26424136/99148028-0aaed500-26b8-11eb-9a24-cc5619ae13da.PNG">
+
 #### Testing
 ![12](https://user-images.githubusercontent.com/26424136/99102861-42af0d00-2611-11eb-9a20-42b5b0c1f626.png)
 
@@ -254,6 +263,8 @@ Untuk mengakses file assets javascript awalnya harus menggunakan url http://pena
 ```
 Alias "/js" "/var/www/penanjakan.semerut06.pw/public/javascript"
 ```
+<img width="366" alt="13 b" src="https://user-images.githubusercontent.com/26424136/99147987-bb68a480-26b7-11eb-8524-f37b05ee079b.PNG">
+<br>
 - Restart apache dengan perintah `service apache2 restart`
 #### Testing
 Halaman dengan alamat http://penanjakan.semeruyyy.pw/js ketika diakses menampilkan <b>403 Forbidden</b> dikarenakan `folder yang berada di dalam /public tidak dibolehkan directory listing.` <br>
@@ -273,10 +284,14 @@ sudah bisa diakses hanya dengan menggunakan port 8888. DocumentRoot web berada p
 ```
 DocumentRoot /var/www/naik.gunung.semerut06.pw
 ```
+<img width="365" alt="14 a" src="https://user-images.githubusercontent.com/26424136/99147948-6d53a100-26b7-11eb-8cd8-3326d62fc82c.PNG">
+<br>
 - Tambahkan port 8888 pada file <b>ports.conf</b>. File </b>ports.conf</b> berada pada directory `/etc/apache2`. Cara menambahkan port yang perlu didengar adalah dengan menuliskan
 ```
 Listen 8888
 ```
+<img width="364" alt="14 b" src="https://user-images.githubusercontent.com/26424136/99147951-6f1d6480-26b7-11eb-91bd-9161348dc824.PNG">
+<br>
 - Restart apache <br>
 Gunakan perintah `service apache2 restart`
 #### Testing
@@ -300,6 +315,8 @@ htpasswd -c /etc/apache2/.htpasswd semeru
 ```
 kuynaikgunung
 ```
+<img width="366" alt="15b" src="https://user-images.githubusercontent.com/26424136/99147838-9e7fa180-26b6-11eb-8270-350818177df3.PNG">
+<br>
 - Pindah ke directory `/etc/apache2/sites-enabled` kemudian buka file <b>naik.gunung.semerut06.pw</b> dan tambahkan
 ```
 <Directory "/var/www/naik.gunung.semerut06.pw">
@@ -309,6 +326,8 @@ kuynaikgunung
      Require valid-user
 </Directory>
 ```
+<img width="367" alt="15" src="https://user-images.githubusercontent.com/26424136/99147801-5d878d00-26b6-11eb-9cf7-593986a3fafa.PNG">
+
 #### Testing
 Masukkan username `semeru` dan password `kuynaikgunung` <br>
 ![no 14 15](https://user-images.githubusercontent.com/26424136/99102871-45116700-2611-11eb-9caf-cf2adb8c5a42.png)
@@ -319,11 +338,14 @@ Login berhasil dan website bisa diakses <br>
 #### Soal
 Saat Bibah mengunjungi IP PROBOLINGGO, yang muncul bukan web utama http://semeruyyy.pw melainkan laman default Apache yang bertuliskan “It works!”. Karena dirasa kurang profesional, maka setiap Bibah mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke http://semeruyyy.pw.
 #### Penyelesaian
-Pindah ke directory `/etc/apache2` kemudian buka file <b>default</b> dan tambahkan
+Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>default</b> dan tambahkan
 ```
 Redirect / http://semerut06.pw
 ```
+<img width="364" alt="16c" src="https://user-images.githubusercontent.com/26424136/99147728-ca4e5780-26b5-11eb-8fb5-e284fdc83018.PNG"> <br>
+
 #### Testing
+![16a](https://user-images.githubusercontent.com/26424136/99147613-f7e6d100-26b4-11eb-9b19-366216a48384.png)
 ![8](https://user-images.githubusercontent.com/26424136/99102829-375be180-2611-11eb-85cd-46e5cdfdd6e9.png)
 
 ### NOMOR 17
@@ -345,6 +367,7 @@ RewriteRule ^(.*)semeru(.*)$ /public/images/semeru.jpg
      AllowOverride All
 </Directory>
 ```
+<img width="365" alt="no 17b" src="https://user-images.githubusercontent.com/26424136/99147677-6fb4fb80-26b5-11eb-8adb-19520119567a.PNG"> <br>
 - Restart apache dengan perintah `service apache2 restart`
 #### Testing
 ![17](https://user-images.githubusercontent.com/26424136/99147536-70995d80-26b4-11eb-9b18-f9ef7e1401c0.png)
