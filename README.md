@@ -335,9 +335,9 @@ Karena pengunjung pada /var/www/penanjakan.semeruyyy.pw/public/images sangat ban
 - Buat file <b>.htaccess</b> dengan isi file
 ``` 
 RewriteEngine on
-RewriteCond %{REQUEST_URI} semeru
-RewriteRule .* index.php 
+RewriteRule ^(.*)semeru(.*)$ /public/images/semeru.jpg 
 ```
+<img width="365" alt="no 17" src="https://user-images.githubusercontent.com/26424136/99147539-72fbb780-26b4-11eb-98aa-d71c39ae9e3c.PNG"> <br>
 - Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>penanjakan.semerut06.pw</b> dan tambahkan
 ```
 <Directory /var/www/penanjakan.semerut06.pw>
@@ -347,6 +347,6 @@ RewriteRule .* index.php
 ```
 - Restart apache dengan perintah `service apache2 restart`
 #### Testing
-
+![17](https://user-images.githubusercontent.com/26424136/99147536-70995d80-26b4-11eb-9b18-f9ef7e1401c0.png)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <b>Semangat uyy !!! || TUHAN BERSAMA MAHASISWA SEMESTER 5</b>
