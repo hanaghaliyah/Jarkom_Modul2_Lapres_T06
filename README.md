@@ -351,7 +351,7 @@ Redirect / http://semerut06.pw
 Karena pengunjung pada /var/www/penanjakan.semeruyyy.pw/public/images sangat banyak maka semua request gambar yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
 
 #### Penyelesaian
-- Pindah ke directory `/var/www`
+- Pindah ke directory `/var/www/penanjakan.semerut06.pw`
 - Buat file <b>.htaccess</b> dengan isi file
 ``` 
 RewriteEngine on
