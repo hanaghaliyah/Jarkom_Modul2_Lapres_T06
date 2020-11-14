@@ -266,6 +266,7 @@ Alias "/js" "/var/www/penanjakan.semerut06.pw/public/javascript"
 <img width="366" alt="13 b" src="https://user-images.githubusercontent.com/26424136/99147987-bb68a480-26b7-11eb-8524-f37b05ee079b.PNG">
 <br>
 - Restart apache dengan perintah `service apache2 restart`
+
 #### Testing
 Halaman dengan alamat http://penanjakan.semeruyyy.pw/js ketika diakses menampilkan <b>403 Forbidden</b> dikarenakan `folder yang berada di dalam /public tidak dibolehkan directory listing.` <br>
 ![13](https://user-images.githubusercontent.com/26424136/99102862-4347a380-2611-11eb-9521-d524efef502f.png)
@@ -294,6 +295,7 @@ Listen 8888
 <br>
 - Restart apache <br>
 Gunakan perintah `service apache2 restart`
+
 #### Testing
 ![no 14 15](https://user-images.githubusercontent.com/26424136/99102871-45116700-2611-11eb-9caf-cf2adb8c5a42.png)
 
