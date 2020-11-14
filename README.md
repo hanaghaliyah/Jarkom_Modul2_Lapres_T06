@@ -284,13 +284,11 @@ sudah bisa diakses hanya dengan menggunakan port 8888. DocumentRoot web berada p
 ```
 DocumentRoot /var/www/naik.gunung.semerut06.pw
 ```
-<img width="365" alt="14 a" src="https://user-images.githubusercontent.com/26424136/99147948-6d53a100-26b7-11eb-8cd8-3326d62fc82c.PNG">
-<br>
+<img width="365" alt="14 a" src="https://user-images.githubusercontent.com/26424136/99147948-6d53a100-26b7-11eb-8cd8-3326d62fc82c.PNG"><br>
 - Tambahkan port 8888 pada file <b>ports.conf</b>. File </b>ports.conf</b> berada pada directory `/etc/apache2`. Cara menambahkan port yang perlu didengar adalah dengan menuliskan
 ```
 Listen 8888
 ```
-<br>
 <img width="364" alt="14 b" src="https://user-images.githubusercontent.com/26424136/99147951-6f1d6480-26b7-11eb-91bd-9161348dc824.PNG"> <br>
 - Restart apache <br>
 Gunakan perintah `service apache2 restart`
