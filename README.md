@@ -236,7 +236,7 @@ Pada folder /public dibolehkan directory listing namun untuk folder yang berada 
      Options -Indexes
 </Directory>
 ```
-<img width="362" alt="11b" src="https://user-images.githubusercontent.com/26424136/99148085-52cdf780-26b8-11eb-8afe-4401848da87f.PNG">
+<img width="362" alt="11b" src="https://user-images.githubusercontent.com/26424136/99148085-52cdf780-26b8-11eb-8afe-4401848da87f.PNG"> <br>
 - Restart apache dengan perintah `service apache2 restart`
 
 #### Testing
