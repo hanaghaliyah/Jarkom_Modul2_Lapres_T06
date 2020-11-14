@@ -290,6 +290,7 @@ DocumentRoot /var/www/naik.gunung.semerut06.pw
 ```
 Listen 8888
 ```
+<br>
 <img width="364" alt="14 b" src="https://user-images.githubusercontent.com/26424136/99147951-6f1d6480-26b7-11eb-91bd-9161348dc824.PNG"> <br>
 - Restart apache <br>
 Gunakan perintah `service apache2 restart`
