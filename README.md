@@ -263,8 +263,7 @@ Untuk mengakses file assets javascript awalnya harus menggunakan url http://pena
 ```
 Alias "/js" "/var/www/penanjakan.semerut06.pw/public/javascript"
 ```
-<img width="366" alt="13 b" src="https://user-images.githubusercontent.com/26424136/99147987-bb68a480-26b7-11eb-8524-f37b05ee079b.PNG">
-<br>
+<img width="366" alt="13 b" src="https://user-images.githubusercontent.com/26424136/99147987-bb68a480-26b7-11eb-8524-f37b05ee079b.PNG"> <br>
 - Restart apache dengan perintah `service apache2 restart`
 
 #### Testing
@@ -291,8 +290,7 @@ DocumentRoot /var/www/naik.gunung.semerut06.pw
 ```
 Listen 8888
 ```
-<img width="364" alt="14 b" src="https://user-images.githubusercontent.com/26424136/99147951-6f1d6480-26b7-11eb-91bd-9161348dc824.PNG">
-<br>
+<img width="364" alt="14 b" src="https://user-images.githubusercontent.com/26424136/99147951-6f1d6480-26b7-11eb-91bd-9161348dc824.PNG"> <br>
 - Restart apache <br>
 Gunakan perintah `service apache2 restart`
 
