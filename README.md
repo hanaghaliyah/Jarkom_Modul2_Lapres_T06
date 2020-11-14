@@ -237,8 +237,8 @@ Pada folder /public dibolehkan directory listing namun untuk folder yang berada 
 </Directory>
 ```
 <img width="362" alt="11b" src="https://user-images.githubusercontent.com/26424136/99148085-52cdf780-26b8-11eb-8afe-4401848da87f.PNG">
-<br>
 - Restart apache dengan perintah `service apache2 restart`
+
 #### Testing
 ![11](https://user-images.githubusercontent.com/26424136/99102858-42167680-2611-11eb-8fc7-b1650f2711e9.png)
 
