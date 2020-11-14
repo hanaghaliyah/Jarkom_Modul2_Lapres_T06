@@ -338,9 +338,9 @@ RewriteEngine on
 RewriteCond %{REQUEST_URI} semeru
 RewriteRule .* index.php 
 ```
-- Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>semerut06.pw</b> dan tambahkan
+- Pindah ke directory `/etc/apache2/sites-available` kemudian buka file <b>penanjakan.semerut06.pw</b> dan tambahkan
 ```
-<Directory /var/www/semerut06.pw>
+<Directory /var/www/penanjakan.semerut06.pw>
      Options +FollowSymLinks -Multiviews
      AllowOverride All
 </Directory>
