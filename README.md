@@ -314,8 +314,7 @@ htpasswd -c /etc/apache2/.htpasswd semeru
 ```
 kuynaikgunung
 ```
-<img width="366" alt="15b" src="https://user-images.githubusercontent.com/26424136/99147838-9e7fa180-26b6-11eb-8270-350818177df3.PNG">
-<br>
+<img width="366" alt="15b" src="https://user-images.githubusercontent.com/26424136/99147838-9e7fa180-26b6-11eb-8270-350818177df3.PNG"> <br>
 - Pindah ke directory `/etc/apache2/sites-enabled` kemudian buka file <b>naik.gunung.semerut06.pw</b> dan tambahkan
 ```
 <Directory "/var/www/naik.gunung.semerut06.pw">
