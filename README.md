@@ -154,7 +154,7 @@ naik	IN	A	10.151.73.180	; IP Probolinggo
 Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur web server. Domain http://semeruyyy.pw memiliki DocumentRoot pada /var/www/semeruyyy.pw.
 #### Penyelesaian
 - Pindah ke directory `/etc/apache2/sites-available`
-- Buka file <b>semerut06.pw</b> dan ubah <b>DocumentRoot</b> menjadi `/var/www/semerut06.pw`
+- Buka file <b>semerut06.pw</b> dan ubah <b>DocumentRoot</b> menjadi `/var/www/semerut06.pw` <br>
 <img width="364" alt="8b" src="https://user-images.githubusercontent.com/26424136/99148348-c1f81b80-26b9-11eb-914f-6043cbd82507.PNG"> <br>
 - Aktifkan konfigurasi <b>semerut06.pw</b>
 Gunakan perintah `a2ensite semerut06.pw`
