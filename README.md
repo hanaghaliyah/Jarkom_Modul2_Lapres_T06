@@ -61,8 +61,12 @@ zone "73.151.10.in-addr.arpa" {
     type master;
     file "/etc/bind/semeru/73.151.10.in-addr.arpa";
 };
+``` 
+![5 1](https://user-images.githubusercontent.com/61286109/99184947-4198ef80-2779-11eb-8500-b7bfc5a1c666.PNG) <br>
+- Copykan file db.local pada path /etc/bind ke dalam folder semeru yang baru saja dibuat dan ubah namanya menjadi 73.151.10.in-addr.arpa
 ```
-- Copy file <b>db.local</b> ke <b>73.151.10.in-addr.arpa</b> dengan perintah `cp /etc/bind/db.local /etc/bind/semeru/73.151.10.in-addr.arpa`
+cp /etc/bind/db.local /etc/bind/semeru/73.151.10.in-addr.arpa
+```
 - Kemudian `nano /etc/bind/semeru/73.151.10.in-addr.arpa` dan diubah
 ```
 180	IN	PTR	semerut06.pw
@@ -92,7 +96,7 @@ zone "semerut06.pw" {
 - Kemudian ke <b>Server Mojokerto</b> dan update terlebih dahulu `apt-get update` dan install bind9 jika belum
 - Ubah konfigurasi pada <b>Server Mojokerto</b> dengan `nano /etc/bind/named.conf.local`
 ```
-zone "jarkom2020.com" {
+zone "semerut06.pw" {
     type slave;
     masters { 10.151.73.178; }; //IP Malang
     file "/var/lib/bind/semerut06.pw";
