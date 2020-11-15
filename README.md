@@ -132,10 +132,10 @@ zone "semerut06.pw" {
 - Kemudian `nano /etc/bind/named.conf.options` pada <b>Server Mojokerto</b> dan bagian <b>dnssec-validation auto;</b> dijadikan komen dan tambahkan <b>allow-query{any;};</b>
 - Buka `nano /etc/bind/named.conf.local` pada <b>UML Mojokerto</b> dan ubah syntaxnya
 ```
-zone "semerut06.pw" {
+zone "gunung.semerut06.pw" {
     type master;
-    allow-transfer { any; };
     file "/etc/bind/delegasi/gunung.semerut06.pw";
+    allow-transfer { any; };
 };
 ```
 ![5 dua](https://user-images.githubusercontent.com/61286109/99184971-6c834380-2779-11eb-8b13-de327214f639.PNG)
