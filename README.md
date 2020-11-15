@@ -62,7 +62,7 @@ zone "73.151.10.in-addr.arpa" {
     file "/etc/bind/semeru/73.151.10.in-addr.arpa";
 };
 ```
-- Copy file <b>db.local</b> ke <b>73.151.10.in-addr.arpa</b> dengan perintah `cp /etc/bind/db.local /etc/bind/jarkom/73.151.10.in-addr.arpa`
+- Copy file <b>db.local</b> ke <b>73.151.10.in-addr.arpa</b> dengan perintah `cp /etc/bind/db.local /etc/bind/semeru/73.151.10.in-addr.arpa`
 - Kemudian `nano /etc/bind/semeru/73.151.10.in-addr.arpa` dan diubah
 ```
 178	IN	PTR	semerut06.pw
