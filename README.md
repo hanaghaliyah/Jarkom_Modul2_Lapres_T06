@@ -20,7 +20,7 @@ zone "semerut06.pw" {
 };
 ```
 - Buat folder <b>semeru</b> di `/etc/bind` 
-- Copy file <b>db.local</b> ke <b>semerut06.pw</b> dengan perintah `cp /etc/bind/db.local /etc/bind/jarkom/jarkom2020.com`
+- Copy file <b>db.local</b> ke <b>semerut06.pw</b> dengan perintah `cp /etc/bind/db.local /etc/bind/semeru/semerut06.pw`
 - Kemudian `nano /etc/bind/semeru/semerut06.pw` dan diubah
 ```
 @	IN	NS	semerut06.pw
