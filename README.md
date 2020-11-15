@@ -20,7 +20,7 @@ zone "semerut06.pw" {
 	file "/etc/bind/semeru/semerut06.pw";
 };
 ```
-![5 1](https://user-images.githubusercontent.com/61286109/99184947-4198ef80-2779-11eb-8500-b7bfc5a1c666.PNG) <br>
+![gambar](https://user-images.githubusercontent.com/26424136/99185729-50ce6c00-277e-11eb-8f7b-0ef11cacc8a0.png)
 - Buat folder <b>semeru</b> di `/etc/bind` 
 - Copy file <b>db.local</b> ke <b>semerut06.pw</b> dengan perintah `cp /etc/bind/db.local /etc/bind/semeru/semerut06.pw`
 - Kemudian `nano /etc/bind/semeru/semerut06.pw` dan diubah
