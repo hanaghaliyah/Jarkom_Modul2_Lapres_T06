@@ -5,8 +5,6 @@ Kelompok T06
 1. Hana Ghaliyah Azhar  (05311840000032)
 2. Azmi                 (05311840000047)
 
-![Uploading 1.PNG…]()
-
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -30,6 +28,7 @@ zone "semerut06.pw" {
 @	IN	A	10.151.73.178	; IP Malang
 www	IN	CNAME	semerut06.pw	; Alias
 ```
+![1,2](https://user-images.githubusercontent.com/61286109/99184592-9e46db00-2776-11eb-8f63-339b0fcbe6cc.PNG)
 - Restart dengan perintah `service bind9 restart`
 #### Testing
 Nomor 1 <br>
