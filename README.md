@@ -20,6 +20,7 @@ zone "semerut06.pw" {
 	file "/etc/bind/semeru/semerut06.pw";
 };
 ```
+![5 1](https://user-images.githubusercontent.com/61286109/99184947-4198ef80-2779-11eb-8500-b7bfc5a1c666.PNG) <br>
 - Buat folder <b>semeru</b> di `/etc/bind` 
 - Copy file <b>db.local</b> ke <b>semerut06.pw</b> dengan perintah `cp /etc/bind/db.local /etc/bind/semeru/semerut06.pw`
 - Kemudian `nano /etc/bind/semeru/semerut06.pw` dan diubah
@@ -126,6 +127,7 @@ zone "semerut06.pw" {
     file "/etc/bind/semeru/semerut06.pw";
 };
 ```
+![5 1](https://user-images.githubusercontent.com/61286109/99184947-4198ef80-2779-11eb-8500-b7bfc5a1c666.PNG) <br>
 - Restart bind9, `service bind9 restart`
 - Kemudian `nano /etc/bind/named.conf.options` pada <b>Server Mojokerto</b> dan bagian <b>dnssec-validation auto;</b> dijadikan komen dan tambahkan <b>allow-query{any;};</b>
 - Buka `nano /etc/bind/named.conf.local` pada <b>UML Mojokerto</b> dan ubah syntaxnya
