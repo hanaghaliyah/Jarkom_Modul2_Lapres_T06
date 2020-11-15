@@ -151,7 +151,7 @@ zone "semerut06.pw" {
 ```
 ![5 1](https://user-images.githubusercontent.com/61286109/99184947-4198ef80-2779-11eb-8500-b7bfc5a1c666.PNG) <br>
 - Restart bind9, `service bind9 restart`
-- Kemudian `nano /etc/bind/named.conf.options` pada <b>Server Mojokerto</b> dan bagian <b>dnssec-validation auto;</b> dijadikan komen dan tambahkan <b>allow-query{any;};</b>
+- Kemudian `nano /etc/bind/named.conf.options` pada <b>Server Mojokerto</b> dan bagian <b>dnssec-validation auto;</b> dijadikan komen dan tambahkan <b>allow-query{any;};</b> <br>
 <img width="366" alt="mojokerto2" src="https://user-images.githubusercontent.com/26424136/99187020-bb83a580-2786-11eb-840c-76e726884cfc.PNG"> <br>
 - Buka `nano /etc/bind/named.conf.local` pada <b>UML Mojokerto</b> dan ubah syntaxnya
 ```
