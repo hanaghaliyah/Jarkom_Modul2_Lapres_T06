@@ -21,7 +21,7 @@ MALANG  (Sebagai DNS Master Server) <br>
 MOJOKERTO (Sebagai DNS Slave Server) <br>
 <img width="367" alt="mojokerto" src="https://user-images.githubusercontent.com/26424136/99187018-baeb0f00-2786-11eb-825c-f110054fa002.PNG"> <br>
 PROBOLINGGO  (Sebagai Web Server) <br>
-<img width="366" alt="probolinggo" src="https://user-images.githubusercontent.com/26424136/99187021-bcb4d280-2786-11eb-988b-dd3dee8a965b.PNG">
+<img width="366" alt="probolinggo" src="https://user-images.githubusercontent.com/26424136/99187021-bcb4d280-2786-11eb-988b-dd3dee8a965b.PNG"> <br>
 GRESIK (Sebagai Klien) <br>
 <img width="366" alt="gresik" src="https://user-images.githubusercontent.com/26424136/99187016-ba527880-2786-11eb-9151-ba59475cbad2.PNG"> <br>
 SIDOARJO (Sebagai Klien) <br>
