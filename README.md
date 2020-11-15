@@ -65,7 +65,7 @@ zone "73.151.10.in-addr.arpa" {
 - Copy file <b>db.local</b> ke <b>73.151.10.in-addr.arpa</b> dengan perintah `cp /etc/bind/db.local /etc/bind/semeru/73.151.10.in-addr.arpa`
 - Kemudian `nano /etc/bind/semeru/73.151.10.in-addr.arpa` dan diubah
 ```
-178	IN	PTR	semerut06.pw
+180	IN	PTR	semerut06.pw
 ```
 ![4](https://user-images.githubusercontent.com/61286109/99184881-d8b17780-2778-11eb-8999-9bf4db1e3027.PNG)
 - Restart bind9, `service bind9 restart`
