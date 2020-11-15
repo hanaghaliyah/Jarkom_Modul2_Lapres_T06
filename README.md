@@ -45,6 +45,7 @@ subdomain http://penanjakan.semeruyyy.pw yang diatur DNS-nya pada MALANG dan men
 ```
 penanjakan	IN	A	10.151.73.180	; IP Probolinggo
 ```
+![3](https://user-images.githubusercontent.com/61286109/99184664-3e046900-2777-11eb-8ca7-143de430b699.PNG)
 - Restart dengan perintah `service bind9 restart`
 #### Testing
 <img width="365" alt="3" src="https://user-images.githubusercontent.com/26424136/99102805-2f9c3d00-2611-11eb-8854-cf76e07cfb34.PNG">
@@ -66,6 +67,7 @@ zone "73.151.10.in-addr.arpa" {
 ```
 178	IN	PTR	semerut06.pw
 ```
+![4](https://user-images.githubusercontent.com/61286109/99184881-d8b17780-2778-11eb-8999-9bf4db1e3027.PNG)
 - Restart bind9, `service bind9 restart`
 
 #### Testing
@@ -85,6 +87,7 @@ zone "semerut06.pw" {
     file "/etc/bind/semeru/semerut06.pw";
 };
 ```
+![5 1](https://user-images.githubusercontent.com/61286109/99184947-4198ef80-2779-11eb-8500-b7bfc5a1c666.PNG)
 - Restart bind9, `service bind9 restart`
 - Kemudian ke <b>Server Mojokerto</b> dan update terlebih dahulu `apt-get update` dan install bind9 jika belum
 - Ubah konfigurasi pada <b>Server Mojokerto</b> dengan `nano /etc/bind/named.conf.local`
@@ -95,6 +98,7 @@ zone "jarkom2020.com" {
     file "/var/lib/bind/semerut06.pw";
 };
 ```
+![5 dua](https://user-images.githubusercontent.com/61286109/99184971-6c834380-2779-11eb-8b13-de327214f639.PNG)
 - Restart bind9, `service bind9 restart`
 #### Testing
 <img width="729" alt="5" src="https://user-images.githubusercontent.com/26424136/99102817-3460f100-2611-11eb-927b-40f81ae39468.PNG">
@@ -108,6 +112,7 @@ Selain website utama Bibah juga meminta dibuatkan <b>subdomain</b> dengan alamat
 ns1	IN	A	10.151.73.179	; IP Mojokerto
 gunung	IN	A	ns1
 ```
+![6](https://user-images.githubusercontent.com/61286109/99184995-8ae93f00-2779-11eb-8d05-3e46ae74a6aa.PNG)
 - Kemudian `nano /etc/bind/named.conf.options` pada <b>Server Malang</b> dan bagian <b>dnssec-validation auto;</b> dijadikan komen dan tambahkan <b>allow-query{any;};</b>
 - Buka `nano /etc/bind/named.conf.local` pada <b>UML Malang</b> dan ubah syntaxnya
 ```
@@ -127,6 +132,7 @@ zone "semerut06.pw" {
     file "/etc/bind/delegasi/gunung.semerut06.pw";
 };
 ```
+![5 dua](https://user-images.githubusercontent.com/61286109/99184971-6c834380-2779-11eb-8b13-de327214f639.PNG)
 - Kemudian buat folder <b>delegasi</b>
 - Dan copy file <b>db.local</b> ke <b>gunung.semerut06.pw</b> dengan perintah `cp /etc/bind/db.local /etc/bind/delegasi/gunung.semerut06.pw`
 - Ubah isinya `/etc/bind/delegasi/gunung.semerut06.pw`
@@ -134,6 +140,7 @@ zone "semerut06.pw" {
 @	IN	NS	gunung.semerut06.pw
 @	IN	A	10.151.73.180	; IP Probolinggo
 ```
+![6 1](https://user-images.githubusercontent.com/61286109/99185066-f59a7a80-2779-11eb-8664-d7310809dd3b.PNG)
 - Restart bind9, `service bind9 restart`
 #### Testing
 <img width="364" alt="6" src="https://user-images.githubusercontent.com/26424136/99102821-362ab480-2611-11eb-8649-b797e6efec5a.PNG">
@@ -147,6 +154,7 @@ Bibah juga ingin memberi petunjuk mendaki gunung semeru kepada anggota komunitas
 ```
 naik	IN	A	10.151.73.180	; IP Probolinggo
 ```
+![7](https://user-images.githubusercontent.com/61286109/99185086-224e9200-277a-11eb-81db-5d67e8484685.PNG)
 - Restart bind9, `service bind9 restart`
 #### Testing
 <img width="366" alt="7" src="https://user-images.githubusercontent.com/26424136/99102825-36c34b00-2611-11eb-878c-7d26ee09f860.PNG">
